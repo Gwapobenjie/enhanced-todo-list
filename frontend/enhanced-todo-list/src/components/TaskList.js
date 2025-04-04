@@ -1,9 +1,9 @@
-import React from 'react';
-import TaskItem from './TaskItem'; // You may need to create this if it doesn't exist
+import React from "react";
+import TaskItem from "./TaskItem";
 
 const TaskList = ({ tasks, onToggle, onDelete }) => {
   return (
-    <ul className="task-list">
+    <ul>
       {tasks.length === 0 ? (
         <p>No tasks available.</p>
       ) : (

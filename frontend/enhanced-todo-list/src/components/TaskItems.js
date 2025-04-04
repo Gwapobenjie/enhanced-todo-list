@@ -1,13 +1,15 @@
-import React from 'react';
+import React from "react";
 
 const TaskItem = ({ task, onToggle, onDelete }) => {
   return (
-    <li className={`task-item ${task.completed ? 'completed' : ''}`}>
-      <span onClick={() => onToggle(task.id)}>
-        {task.completed ? '✔️ ' : '⭕ '}
-        {task.title}
+    <li>
+      <span 
+        style={{ textDecoration: task.completed ? "line-through" : "none" }}
+        onClick={() => onToggle(task.id, !task.completed)}
+      >
+        {task.text}
       </span>
-      <button onClick={() => onDelete(task.id)}>❌</button>
+      <button onClick={() => onDelete(task.id)}>Delete</button>
     </li>
   );
 };
